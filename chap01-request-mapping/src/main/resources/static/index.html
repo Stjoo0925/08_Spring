@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<!--get 방식으로 외부에서 데이터를 찾는다-->
+<a href="https://naver.com"> 네이버 </a>
+<!--get 방식으로 내부에서 데이터를 찾는다-->
+<a href="orders/regist"> get 방식의 주문핸들러 요청 </a>
+
+<form action="orders/regist" method="post">
+    <input type="submit" value="전송"/>
+</form>
+<a href="orders/detail/1">1번 조회</a>
+<a href="orders/?test=hi~~&value=test">쿼리스트링~</a>
+</body>
+</html>
