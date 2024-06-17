@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>page2</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+</head>
+<body>
+    <h1> 두 번째 문제 </h1>
+    <hr>
+    <p> 👉 3. 사용자의 권한을 select box(2가지)로 선택하여 1개는 정상응답 1개는 비정상 응답으로 구분 </br>
+        👉 3-1 정상응답 : 사용자가 입력한 메세지를 담아서 화면에 표시 </br>
+        👉 3-2: 비정상응답 : 사용자에게 잘못된 요청이라는 값을 담아서 index에서 alert로 표시</p>
+    <h1 th:text="${message}">표시자리</h1>
+    <hr>
+    <form action="/Refresh" method="get">
+        <button type="submit">홈으로</button>
+    </form>
+</body>
+</html>

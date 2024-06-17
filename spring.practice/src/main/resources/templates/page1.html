@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>page1</title>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+</head>
+<body>
+    <h1> 첫 번째 문제 </h1>
+    <hr>
+    <p> 👉 사용자가 입력한 쿼리 스트링 파라미터 값을 h1태그를 이용하여 표시하는 컨트롤러</p>
+    <h1 th:text="${name}">표시자리</h1>
+    <hr>
+    <form action="/Refresh" method="get">
+        <button type="submit">홈으로</button>
+    </form>
+</body>
+</html>
