@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:url" content="http://192.168.0.58:8080/">
+    <meta property="og:title" content="스프링 실습 문제 1">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/Users/joosoontae/Downloads/spring.practice/src/TN.png">
+    <meta property="og:description" content="스프링실습 문제 1번입니다.">
     <title>Index</title>
     <link rel="stylesheet" href="https://latex.now.sh/style.css">
 </head>
@@ -10,20 +15,20 @@
     <hr>
     <h2> ❗ 첫번째 문제 </h2>
     <form action="go-page1" method="get">
-        <input type="text" id="name" name="name" placeholder="글자를 입력해주세요.">
+        <input type="text" id="name" name="name" placeholder="메세지를 입력하세요.">
         <button type="submit">이동</button>
     </form>
     </br>
     <hr>
     <h2> ❗ 두번째 문제 </h2>
     <form action="process-page" method="get" id="myForm">
-        <input type="text" name="message" placeholder="메시지를 입력하세요">
+        <input type="text" name="message" placeholder="메시지를 입력하세요.">
+        <button type="submit">이동</button></br>
         <select id="pageSelect" name="pageSelect">
             <option value="">페이지를 선택하세요</option>
             <option value="success">정상응답</option>
             <option value="failure">비정상응답</option>
         </select>
-        <button type="submit">이동</button>
     </form>
     <script>
         document.getElementById("myForm").addEventListener("submit", function(event) {
