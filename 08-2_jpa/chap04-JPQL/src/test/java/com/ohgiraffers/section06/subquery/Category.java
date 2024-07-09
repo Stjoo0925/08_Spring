@@ -1,11 +1,10 @@
-package com.ohgiraffers.section03.projection;
+package com.ohgiraffers.section06.subquery;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-@Entity(name = "category_section03")
+import java.util.List;
+
+@Entity(name = "category_section06")
 @Table(name = "tbl_category")
 public class Category {
 
@@ -18,6 +17,7 @@ public class Category {
 
     @Column(name = "ref_category_code")
     private Integer refCategoryCode;
+
 
     public Category() {
     }
@@ -54,7 +54,7 @@ public class Category {
 
     @Override
     public String toString() {
-        return "category{" +
+        return "Category{" +
                 "categoryCode=" + categoryCode +
                 ", categoryName='" + categoryName + '\'' +
                 ", refCategoryCode=" + refCategoryCode +

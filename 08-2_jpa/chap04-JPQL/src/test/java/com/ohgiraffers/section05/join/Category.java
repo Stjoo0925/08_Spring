@@ -1,11 +1,10 @@
-package com.ohgiraffers.section03.projection;
+package com.ohgiraffers.section05.join;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-@Entity(name = "category_section03")
+import java.util.List;
+
+@Entity(name = "category_section05")
 @Table(name = "tbl_category")
 public class Category {
 
@@ -19,13 +18,17 @@ public class Category {
     @Column(name = "ref_category_code")
     private Integer refCategoryCode;
 
+    @OneToMany(mappedBy = "categoryCode")
+    private List<Menu> menuList;
+
     public Category() {
     }
 
-    public Category(int categoryCode, String categoryName, Integer refCategoryCode) {
+    public Category(int categoryCode, String categoryName, Integer refCategoryCode, List<Menu> menuList) {
         this.categoryCode = categoryCode;
         this.categoryName = categoryName;
         this.refCategoryCode = refCategoryCode;
+        this.menuList = menuList;
     }
 
     public int getCategoryCode() {
@@ -52,9 +55,17 @@ public class Category {
         this.refCategoryCode = refCategoryCode;
     }
 
+    public List<Menu> getMenuList() {
+        return menuList;
+    }
+
+    public void setMenuList(List<Menu> menuList) {
+        this.menuList = menuList;
+    }
+
     @Override
     public String toString() {
-        return "category{" +
+        return "Category{" +
                 "categoryCode=" + categoryCode +
                 ", categoryName='" + categoryName + '\'' +
                 ", refCategoryCode=" + refCategoryCode +
